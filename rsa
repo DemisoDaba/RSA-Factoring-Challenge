@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 #Challenge
-#!/usr/bin/env bash
-
 # Check the command-line arguments
 if [ $# -ne 1 ] || [ ! -f "$1" ]; then
     echo "Usage: rsa <file>"
