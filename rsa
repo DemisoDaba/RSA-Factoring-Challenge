@@ -1,18 +1,15 @@
 #!/usr/bin/env bash
 #Challenge
-if [ $# -ne 1 ]; then
-    echo 'Usage: rsa <file>'
+#!/usr/bin/env bash
+
+# Check the command-line arguments
+if [ $# -ne 1 ] || [ ! -f "$1" ]; then
+    echo "Usage: rsa <file>"
     exit 1
 fi
 
-file="$1"
-if [ ! -f "$file" ]; then
-    echo "File '$file' not found."
-    exit 1
-fi
-
-# Read the number from the file
-read -r number < "$file"
+read -r number < "$1"
 
 prime_factors=$(factor "$number" | awk '{for(i=2;i<=NF;i++) printf("%s%s", (i>2?" * ":""), $i)}')
+
 echo "$number = $prime_factors"
