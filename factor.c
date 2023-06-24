@@ -1,6 +1,5 @@
 #include "factor.h"
 
-
 /**
  * main - main function
  *

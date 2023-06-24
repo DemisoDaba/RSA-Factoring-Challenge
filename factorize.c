@@ -1,5 +1,6 @@
 #include "factor.h"
 
+
 /**
  * factorize - The function factorize a number
  * @buffer: pointer to the address of the number
