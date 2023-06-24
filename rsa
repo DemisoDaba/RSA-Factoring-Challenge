@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+#is a challenge
 
 check_factor()
 {
