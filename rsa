@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#Challenge
 if [ $# -ne 1 ]; then
     echo 'Usage: rsa <file>'
     exit 1
@@ -14,6 +14,5 @@ fi
 # Read the number from the file
 read -r number < "$file"
 
-prime_factors=$(factor "$number" | awk '{print $2}' | tac | paste -sd '*')
+prime_factors=$(factor "$number" | awk '{for(i=2;i<=NF;i++) printf("%s%s", (i>2?" * ":""), $i)}')
 echo "$number = $prime_factors"
-
