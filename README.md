@@ -1,6 +1,6 @@
 **RSA Factoring Challenge:**
 
-The RSA Factoring Challenge involved a computational task of factoring a provided RSA modulus into its two prime factors. Initiated in 1991 and concluded in 2007, this challenge presented various RSA moduli with increasing bit lengths to the public, encouraging them to attempt the factorization process.
+RSA Factoring Challenge involved a computational task of factoring a provided RSA modulus into its two prime factors. Initiated in 1991 and conclude  in 2007, this challenge presented various RSA moduli with increasing bit lengths to the public, encouraging them to attempt the factorization proces
 
 **Challenge Information:**
 
