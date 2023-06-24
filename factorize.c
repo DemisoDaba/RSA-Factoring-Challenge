@@ -4,7 +4,7 @@
  * factorize - The function factorize a number
  * @buffer: pointer to the address of the number
  *
- * Author: Kabada Sori
+ * Author: Demiso Daba
  * Return: int
  */
 int factorize(char *buffer)
