@@ -21,7 +21,7 @@ def process_file(file_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python factors.py <file>")
+        print("Usage: factors <file>")
         sys.exit(1)
 
     file_path = sys.argv[1]
