@@ -1,28 +1,38 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+""" Factor numbers """
+from sys import argv
+from math import sqrt
 
-import sys
-import math
 
-def factorize(number):
-    factors = []
-    for i in range(2, int(math.sqrt(number)) + 1):
-        if number % i == 0:
-            factors.append((i, number // i))
-    return factors
+def open_read_file(file_name):
+    """read from file
+    add to array
+    """
+    with open(file_name, "r", encoding="utf-8") as file:
+        lines = file.readlines()
+    number_to_factor = []
+    for line in lines:
+        number_to_factor.append(int(line))
+    return number_to_factor
 
-def process_file(file_path):
-    with open(file_path, 'r') as file:
-        for line in file:
-            number = int(line.strip())
-            factor_pairs = factorize(number)
-            for pair in factor_pairs:
-                p, q = pair
-                print(f"{number}={p}*{q}")
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: factors <file>")
-        sys.exit(1)
+def find_and_times(n):
+    """factor each
+    n given
+    """
+    for i in range(1, n):
+        if n == ((n // i) * i):
+            print("{}={}*{}".format(n, (n // i), i))
+            break
 
-    file_path = sys.argv[1]
-    process_file(file_path)
+
+def fac_list(ls):
+    """factor each
+    num in ls
+    """
+    for i in ls:
+        find_and_times(i)
+
+
+if len(argv) == 2:
+    fac_list(open_read_file(argv[1]))
